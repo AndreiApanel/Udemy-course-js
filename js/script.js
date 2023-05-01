@@ -1,1 +1,1 @@
-console.log(1);
+const numberOfFilms = promt("Сколько фильмов вы уже просмотрели?");
