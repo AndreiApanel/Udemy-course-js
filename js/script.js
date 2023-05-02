@@ -12,3 +12,13 @@ const yourOpinies = prompt("На сколько оцените его?", "");
 personalMovieDB.movies[lastFilm] = yourOpinies;
 
 console.log(personalMovieDB);
+let result = "";
+const length = 7;
+for (let i = 1; i < length; i++) {
+  for (let j = 0; j < i; j++) {
+    result += "*";
+  }
+  result += "\n";
+}
+
+console.log(result);
