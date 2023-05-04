@@ -12,14 +12,6 @@ const yourOpinies = prompt('На сколько оцените его?', '');
 personalMovieDB.movies[lastFilm] = yourOpinies;
 
 console.log(personalMovieDB);
-let result = '';
-const length = 7;
-for (let i = 1; i < length; i++) {
-  for (let j = 0; j < i; j++) {
-    result += '*';
-  }
-  result += '\n';
-}
 
 console.log(result);
 first: for (let i = 0; i < 3; i++) {
@@ -58,5 +50,34 @@ const data = [5, 10, 'Shopping', 20, 'Homework'];
 const result = [];
 for (let i = data.length - 1; i >= 0; i--) {
   result.push(data[i]);
+}
+
+let result = '';
+const line = 5;
+for (let i = 0; i <= line; i++) {
+  for (let j = 0; j < line - i; j++) {
+    result += ' ';
+  }
+  for (let k = 0; k < 2 * i + 1; k++) {
+    result += '*';
+  }
+
+  result += '\n';
+}
+console.log(result);
+
+let result = '';
+const line = 5;
+for (let i = 0; i <= line; i++) {
+  for (let j = 0; j < line - i; j++) {
+    result += ' ';
+  }
+  for (let k = 0; k < i + 1; k++) {
+    result += '*';
+  }
+  for (let l = 0; l < i; l++) {
+    result += '*';
+  }
+  result += '\n';
 }
 console.log(result);
