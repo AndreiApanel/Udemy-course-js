@@ -124,3 +124,34 @@ for (let i = 0; i <= line; i++) {
   result += '\n';
 }
 console.log(result);
+
+function sayHello(name) {
+  return `Привет, ${name}`;
+}
+console.log(sayHello('Saniya'));
+Пример: вызов функции returnNeighboringNumbers(5)
+
+function returnNeighboringNumbers(n) {
+  let num = [];
+  num[0] = n - 1;
+  num[1] = n;
+  num[2] = n + 1;
+  return num;
+}
+console.log(returnNeighboringNumbers(5));
+
+function getMathResult(num, inc) {
+  let result = '';
+  let a = 0;
+  if (inc <= 0 || typeof inc !== 'number') {
+    return num;
+  }
+
+  for (let i = 0; i < inc; i++) {
+    a += num;
+    result += a + '---';
+  }
+  return result.substring(0, result.length - 3);
+}
+
+console.log(getMathResult(10, 5));
