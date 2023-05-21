@@ -184,17 +184,17 @@
 
 // console.log(getMathResult(10, 5));
 
-function calculateVolumeAndArea(a) {
-  if (typeof a !== 'number' || a <= 0 || Number.isInteger(a) === false) {
-    return 'При вычислении произошла ошибка';
-  }
-  let kvadrat = Math.pow(a, 2);
-  let kub = Math.pow(a, 3);
-  let cubeArea = 6 * kvadrat;
-  return `Объем куба: ${kub}, площадь всей поверхности: ${cubeArea}`;
-}
+// function calculateVolumeAndArea(a) {
+//   if (typeof a !== 'number' || a <= 0 || Number.isInteger(a) === false) {
+//     return 'При вычислении произошла ошибка';
+//   }
+//   let kvadrat = Math.pow(a, 2);
+//   let kub = Math.pow(a, 3);
+//   let cubeArea = 6 * kvadrat;
+//   return `Объем куба: ${kub}, площадь всей поверхности: ${cubeArea}`;
+// }
 
-console.log(calculateVolumeAndArea(15));
+// console.log(calculateVolumeAndArea(15));
 
 // function getCoupeNumber(b) {
 //   if (typeof b !== 'number' || b < 0 || Number.isInteger(b) === false) {
@@ -238,3 +238,23 @@ console.log(calculateVolumeAndArea(15));
 //   else if (33 <= b && b < 37) return 9;
 // }
 // console.log(getCoupeNumber(37));
+
+function getTimeFromMinutes(min) {
+  if (typeof min !== 'number' || min < 0 || Number.isInteger(min) === false) {
+    return 'Ошибка, проверьте данные';
+  }
+  let c = '';
+  let a = Math.floor(min / 60);
+  let b = min - a * 60;
+
+  if (a == 2 || a == 3 || a == 4) {
+    c = 'часа';
+  } else if (a == 1) {
+    c = 'час';
+  } else {
+    c = 'часов';
+  }
+
+  return `Это ${a} ${c} и ${b} минут`;
+}
+console.log(getTimeFromMinutes(60));
