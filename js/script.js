@@ -259,13 +259,32 @@
 // }
 // console.log(getTimeFromMinutes(60));
 
-function findMaxNumber(a, b, c, d) {
-  let max;
-  if (typeof (a, b, c, d) !== 'number' || (a, b, c, d) == null) return 0;
+// function findMaxNumber(a, b, c, d) {
+//   let max;
+//   if (typeof (a, b, c, d) !== 'number' || (a, b, c, d) == null) return 0;
 
-  if (a > b && a > c && a > d) return (max = a);
-  else if (b > c && b > d) return (max = b);
-  else if (c > d) return (max = c);
-  else return (max = d);
+//   if (a > b && a > c && a > d) return (max = a);
+//   else if (b > c && b > d) return (max = b);
+//   else if (c > d) return (max = c);
+//   else return (max = d);
+// }
+// console.log(findMaxNumber(1, 5, 6.6));
+
+function fib(f) {
+  let x = 0;
+  let y = 1;
+  let str = '';
+  if (typeof f !== 'number' || Number.isInteger(f) === false) {
+    return '';
+  }
+  if (f == 1) return '0';
+  if (f == 0) return '';
+  for (let i = 0; i < f; i++) {
+    str += x + ' ';
+    x = x + y;
+    y = x - y;
+  }
+
+  return str.substring(0, str.length - 1);
 }
-console.log(findMaxNumber(1, 5, 6.6));
+console.log(fib(7));
