@@ -184,17 +184,17 @@
 
 // console.log(getMathResult(10, 5));
 
-// function calculateVolumeAndArea(a) {
-//   if (a !== 'number' || a <= 0 || Number.isInteger(b) === false) {
-//     return 'При вычислении произошла ошибка';
-//   }
-//   let kvadrat = Math.pow(a, 2);
-//   let kub = Math.pow(a, 3);
-//   let cubeArea = 6 * kvadrat;
-//   return `Обьем куба:${kub}, площадь всей поверхности ${cubeArea}`;
-// }
+function calculateVolumeAndArea(a) {
+  if (typeof a !== 'number' || a <= 0 || Number.isInteger(a) === false) {
+    return 'При вычислении произошла ошибка';
+  }
+  let kvadrat = Math.pow(a, 2);
+  let kub = Math.pow(a, 3);
+  let cubeArea = 6 * kvadrat;
+  return `Объем куба: ${kub}, площадь всей поверхности: ${cubeArea}`;
+}
 
-// console.log(calculateVolumeAndArea(5.5));
+console.log(calculateVolumeAndArea(15));
 
 // function getCoupeNumber(b) {
 //   if (typeof b !== 'number' || b < 0 || Number.isInteger(b) === false) {
