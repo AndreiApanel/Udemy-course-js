@@ -183,3 +183,58 @@
 // }
 
 // console.log(getMathResult(10, 5));
+
+// function calculateVolumeAndArea(a) {
+//   if (a !== 'number' || a <= 0 || Number.isInteger(b) === false) {
+//     return 'При вычислении произошла ошибка';
+//   }
+//   let kvadrat = Math.pow(a, 2);
+//   let kub = Math.pow(a, 3);
+//   let cubeArea = 6 * kvadrat;
+//   return `Обьем куба:${kub}, площадь всей поверхности ${cubeArea}`;
+// }
+
+// console.log(calculateVolumeAndArea(5.5));
+
+// function getCoupeNumber(b) {
+//   if (typeof b !== 'number' || b < 0 || Number.isInteger(b) === false) {
+//     return 'Ошибка. Проверьте правильность введенного номера места';
+//   }
+//   if (b == 0 || b > 36) {
+//     return 'Таких мест в вагоне не существует';
+//   }
+//   const numberVagon = [
+//     (1, 2, 3, 4),
+//     (5, 6, 7, 8),
+//     (9, 10, 11, 12),
+//     (13, 14, 15, 16),
+//     (17, 18, 19, 20),
+//     (21, 22, 23, 24),
+//     (25, 26, 27, 28),
+//     (29, 30, 31, 32),
+//     (33, 34, 35, 36),
+//   ];
+//   console.log(numberVagon.indexOf(b));
+
+//   const result = numberVagon.findIndex((el) => el.includes(b));
+//   return result;
+// }
+// console.log(getCoupeNumber(2));
+// function getCoupeNumber(b) {
+//   if (typeof b !== 'number' || b < 0 || Number.isInteger(b) === false) {
+//     return 'Ошибка. Проверьте правильность введенного номера места';
+//   }
+//   if (b == 0 || b > 36) {
+//     return 'Таких мест в вагоне не существует';
+//   }
+//   if (0 < b && b < 5) return 1;
+//   else if (5 <= b && b < 9) return 2;
+//   else if (9 <= b && b < 13) return 3;
+//   else if (13 <= b && b < 17) return 4;
+//   else if (17 <= b && b < 21) return 5;
+//   else if (21 <= b && b < 25) return 6;
+//   else if (25 <= b && b < 29) return 7;
+//   else if (29 <= b && b < 33) return 8;
+//   else if (33 <= b && b < 37) return 9;
+// }
+// console.log(getCoupeNumber(37));
