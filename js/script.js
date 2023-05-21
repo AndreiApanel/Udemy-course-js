@@ -239,22 +239,33 @@
 // }
 // console.log(getCoupeNumber(37));
 
-function getTimeFromMinutes(min) {
-  if (typeof min !== 'number' || min < 0 || Number.isInteger(min) === false) {
-    return 'Ошибка, проверьте данные';
-  }
-  let c = '';
-  let a = Math.floor(min / 60);
-  let b = min - a * 60;
+// function getTimeFromMinutes(min) {
+//   if (typeof min !== 'number' || min < 0 || Number.isInteger(min) === false) {
+//     return 'Ошибка, проверьте данные';
+//   }
+//   let c = '';
+//   let a = Math.floor(min / 60);
+//   let b = min - a * 60;
 
-  if (a == 2 || a == 3 || a == 4) {
-    c = 'часа';
-  } else if (a == 1) {
-    c = 'час';
-  } else {
-    c = 'часов';
-  }
+//   if (a == 2 || a == 3 || a == 4) {
+//     c = 'часа';
+//   } else if (a == 1) {
+//     c = 'час';
+//   } else {
+//     c = 'часов';
+//   }
 
-  return `Это ${a} ${c} и ${b} минут`;
+//   return `Это ${a} ${c} и ${b} минут`;
+// }
+// console.log(getTimeFromMinutes(60));
+
+function findMaxNumber(a, b, c, d) {
+  let max;
+  if (typeof (a, b, c, d) !== 'number' || (a, b, c, d) == null) return 0;
+
+  if (a > b && a > c && a > d) return (max = a);
+  else if (b > c && b > d) return (max = b);
+  else if (c > d) return (max = c);
+  else return (max = d);
 }
-console.log(getTimeFromMinutes(60));
+console.log(findMaxNumber(1, 5, 6.6));
