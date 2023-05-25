@@ -270,21 +270,77 @@
 // }
 // console.log(findMaxNumber(1, 5, 6.6));
 
-function fib(f) {
-  let x = 0;
-  let y = 1;
-  let str = '';
-  if (typeof f !== 'number' || Number.isInteger(f) === false) {
-    return '';
-  }
-  if (f == 1) return '0';
-  if (f == 0) return '';
-  for (let i = 0; i < f; i++) {
-    str += x + ' ';
-    x = x + y;
-    y = x - y;
-  }
+// function fib(f) {
+//   let x = 0;
+//   let y = 1;
+//   let str = '';
+//   if (typeof f !== 'number' || Number.isInteger(f) === false) {
+//     return '';
+//   }
+//   if (f == 1) return '0';
+//   if (f == 0) return '';
+//   for (let i = 0; i < f; i++) {
+//     str += x + ' ';
+//     x = x + y;
+//     y = x - y;
+//   }
 
-  return str.substring(0, str.length - 1);
-}
-console.log(fib(7));
+//   return str.substring(0, str.length - 1);
+// }
+// console.log(fib(7));
+// const personalPlanPeter = {
+//   name: 'Peter',
+//   age: '29',
+//   skills: {
+//     languages: ['ru', 'ua', 'eng'],
+//     programmingLangs: {
+//       js: '20%',
+//       php: '10%',
+//     },
+//     exp: '1 month',
+//   },
+//   showAgeAndLangs: function (plan) {
+//     let { languages } = personalPlanPeter.skills;
+//     let { age } = plan;
+//     let str = `Мне ${age} и я владею языками: `;
+//     for (let key in languages) {
+//       str += languages.join(' ', key).toUpperCase();
+//       break;
+//     }
+//     return str;
+//   },
+// };
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function(plan) {
+//         const {age} = plan;
+//         const {languages} = plan.skills;
+//         let str = `Мне ${age} и я владею языками: `;
+
+//         languages.forEach(function(lang) {
+//             str += `${lang.toUpperCase()} `;
+//         });
+
+//         return str;
+//     }
+// };
+// console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+
+// function showProgrammingLangs(plan) {
+//   let lang = plan.skills.programmingLangs;
+//   let results = '';
+//   for (let key in lang) {
+//     results += `\nЯзык ${[key]} изучен на ${lang[key]}`;
+//   }
+//   return results;
+// }
+// console.log(showProgrammingLangs(personalPlanPeter));
