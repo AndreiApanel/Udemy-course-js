@@ -367,3 +367,36 @@
 //   });
 // }
 // standardizeStrings(favoriteCities);
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//   let a = [];
+//   if (typeof str !== 'string') return 'Ошибка!';
+//   for (let i = 0; i < str.length; i++) {
+//     a.push(str[i]);
+//   }
+//   let result = '';
+//   return (result = a.reverse().join(''));
+// }
+// reverse(someString);
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// function availableCurr(arr, missingCurr) {
+//   let a = '';
+//   if (Object.keys(arr).length === 0) {
+//     return (a = 'Нет доступных валют');
+//   } else {
+//     a = 'Доступные вылюты:\n';
+//   }
+//   arr.forEach((element) => {
+//     if (element !== missingCurr) {
+//       a += `${element}\n`;
+//     }
+//   });
+
+//   return a;
+// }
+// availableCurr(additionalCurrencies, 'CNY');
