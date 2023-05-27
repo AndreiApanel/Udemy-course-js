@@ -344,3 +344,26 @@
 //   return results;
 // }
 // console.log(showProgrammingLangs(personalPlanPeter));
+
+// const family = [];
+
+// function showFamily(arr) {
+//   if (Object.keys(arr).length === 0) {
+//     return `Семья пуста`;
+//   }
+//   let str = '';
+//   str = arr.join(' ');
+
+//   return `Семья состоит из: ${str}`;
+// }
+
+// console.log(showFamily(family));
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//   arr.forEach((el) => {
+//     console.log(el.toLowerCase());
+//   });
+// }
+// standardizeStrings(favoriteCities);
