@@ -1,10 +1,10 @@
 // first: for (let i = 0; i < 3; i++) {
-//   console.log(`first level: ${i}`);
+//   .log(`first level: ${i}`);
 //   for (let j = 0; j < 3; j++) {
-//     console.log(`second level: ${j}`);
+//     .log(`second level: ${j}`);
 //     for (let k = 0; k < 3; k++) {
 //       if (k === 2) continue first;
-//       console.log(`third level: ${k}`);
+//       .log(`third level: ${k}`);
 //     }
 //   }
 // }
@@ -14,21 +14,21 @@
 //   if (i % 2 === 0) {
 //     continue;
 //   } else {
-//     console.log(i);
+//     .log(i);
 //   }
 // } while (i <= 16);
 
 // const arrayOfNumbers = [];
 // for (let i = 5; i <= 10; i++) {
 //   arrayOfNumbers.push(i);
-//   console.log(arrayOfNumbers);
+//   .log(arrayOfNumbers);
 // }
 // const arr = [3, 5, 8, 16, 20, 23, 50];
 // const result = [];
 // for (let i = 0; i < arr.length; i++) {
 //   result.push(arr[i]);
 // }
-// console.log(result);
+// .log(result);
 
 // const data = [5, 10, 'Shopping', 20, 'Homework'];
 // const result = [];
@@ -48,7 +48,7 @@
 
 //   result += '\n';
 // }
-// console.log(result);
+// .log(result);
 
 // let result = '';
 // const line = 5;
@@ -64,12 +64,12 @@
 //   }
 //   result += '\n';
 // }
-// console.log(result);
+// .log(result);
 
 // function sayHello(name) {
 //   return `Привет, ${name}`;
 // }
-// console.log(sayHello('Saniya'));
+// .log(sayHello('Saniya'));
 // Пример: вызов функции returnNeighboringNumbers(5)
 
 // function returnNeighboringNumbers(n) {
@@ -79,7 +79,7 @@
 //   num[2] = n + 1;
 //   return num;
 // }
-// console.log(returnNeighboringNumbers(5));
+// .log(returnNeighboringNumbers(5));
 
 // function getMathResult(num, inc) {
 //   let result = '';
@@ -95,7 +95,7 @@
 //   return result.substring(0, result.length - 3);
 // }
 
-// console.log(getMathResult(10, 5));
+// .log(getMathResult(10, 5));
 
 // function calculateVolumeAndArea(a) {
 //   if (typeof a !== 'number' || a <= 0 || Number.isInteger(a) === false) {
@@ -107,7 +107,7 @@
 //   return `Объем куба: ${kub}, площадь всей поверхности: ${cubeArea}`;
 // }
 
-// console.log(calculateVolumeAndArea(15));
+// .log(calculateVolumeAndArea(15));
 
 // function getCoupeNumber(b) {
 //   if (typeof b !== 'number' || b < 0 || Number.isInteger(b) === false) {
@@ -127,12 +127,12 @@
 //     (29, 30, 31, 32),
 //     (33, 34, 35, 36),
 //   ];
-//   console.log(numberVagon.indexOf(b));
+//   .log(numberVagon.indexOf(b));
 
 //   const result = numberVagon.findIndex((el) => el.includes(b));
 //   return result;
 // }
-// console.log(getCoupeNumber(2));
+// .log(getCoupeNumber(2));
 // function getCoupeNumber(b) {
 //   if (typeof b !== 'number' || b < 0 || Number.isInteger(b) === false) {
 //     return 'Ошибка. Проверьте правильность введенного номера места';
@@ -150,7 +150,7 @@
 //   else if (29 <= b && b < 33) return 8;
 //   else if (33 <= b && b < 37) return 9;
 // }
-// console.log(getCoupeNumber(37));
+// .log(getCoupeNumber(37));
 
 // function getTimeFromMinutes(min) {
 //   if (typeof min !== 'number' || min < 0 || Number.isInteger(min) === false) {
@@ -170,7 +170,7 @@
 
 //   return `Это ${a} ${c} и ${b} минут`;
 // }
-// console.log(getTimeFromMinutes(60));
+// .log(getTimeFromMinutes(60));
 
 // function findMaxNumber(a, b, c, d) {
 //   let max;
@@ -181,7 +181,7 @@
 //   else if (c > d) return (max = c);
 //   else return (max = d);
 // }
-// console.log(findMaxNumber(1, 5, 6.6));
+// .log(findMaxNumber(1, 5, 6.6));
 
 // function fib(f) {
 //   let x = 0;
@@ -200,7 +200,7 @@
 
 //   return str.substring(0, str.length - 1);
 // }
-// console.log(fib(7));
+// .log(fib(7));
 // const personalPlanPeter = {
 //   name: 'Peter',
 //   age: '29',
@@ -246,7 +246,7 @@
 //         return str;
 //     }
 // };
-// console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+// .log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
 
 // function showProgrammingLangs(plan) {
 //   let lang = plan.skills.programmingLangs;
@@ -256,7 +256,7 @@
 //   }
 //   return results;
 // }
-// console.log(showProgrammingLangs(personalPlanPeter));
+// .log(showProgrammingLangs(personalPlanPeter));
 
 // const family = [];
 
@@ -270,13 +270,13 @@
 //   return `Семья состоит из: ${str}`;
 // }
 
-// console.log(showFamily(family));
+// .log(showFamily(family));
 
 // const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
 // function standardizeStrings(arr) {
 //   arr.forEach((el) => {
-//     console.log(el.toLowerCase());
+//     .log(el.toLowerCase());
 //   });
 // }
 // standardizeStrings(favoriteCities);
@@ -336,9 +336,9 @@
 //     lastFilm.length < 50
 //   ) {
 //     personalMovieDB.movies[lastFilm] = yourOpinies;
-//     console.log('Done');
+//     .log('Done');
 //   } else {
-//     console.log('error');
+//     .log('error');
 //     i--;
 //   }
 // }
@@ -355,9 +355,9 @@
 //       lastFilm.length < 50
 //     ) {
 //       personalMovieDB.movies[lastFilm] = yourOpinies;
-//       console.log('Done');
+//       .log('Done');
 //     } else {
-//       console.log('error');
+//       .log('error');
 //       i--;
 //     }
 //   }
@@ -367,14 +367,14 @@
 
 // function detectPersonalLevel() {
 //   if (personalMovieDB.count < 10) {
-//     console.log('Просмотрено довольно мало фильмов');
+//     .log('Просмотрено довольно мало фильмов');
 //   } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-//     console.log('Вы классический зритель');
+//     .log('Вы классический зритель');
 //   } else if (personalMovieDB.count >= 30) {
-//     console.log('Вы киноман');
+//     .log('Вы киноман');
 //     50;
 //   } else {
-//     console.log('Произошла ошибка');
+//     .log('Произошла ошибка');
 //     5;
 //   }
 // }
@@ -382,7 +382,7 @@
 
 // function showMyDB(hidden) {
 //   if (!hidden) {
-//     console.log(personalMovieDB);
+//     .log(personalMovieDB);
 //   }
 // }
 // showMyDB(personalMovieDB.privat);
@@ -426,23 +426,23 @@
 //         lastFilm.length < 50
 //       ) {
 //         personalMovieDB.movies[lastFilm] = yourOpinies;
-//         console.log('Done');
+//         .log('Done');
 //       } else {
-//         console.log('error');
+//         .log('error');
 //         i--;
 //       }
 //     }
 //   },
 //   detectPersonalLevel: function () {
 //     if (personalMovieDB.count < 10) {
-//       console.log('Просмотрено довольно мало фильмов');
+//       .log('Просмотрено довольно мало фильмов');
 //     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-//       console.log('Вы классический зритель');
+//       .log('Вы классический зритель');
 //     } else if (personalMovieDB.count >= 30) {
-//       console.log('Вы киноман');
+//       .log('Вы киноман');
 //       50;
 //     } else {
-//       console.log('Произошла ошибка');
+//       .log('Произошла ошибка');
 //       5;
 //     }
 //   },
@@ -454,14 +454,14 @@
 
 //   showMyDB: function (hidden) {
 //     if (!hidden) {
-//       console.log(personalMovieDB);
+//       .log(personalMovieDB);
 //     }
 //   },
 //   writeYourGenres: function () {
 //     for (let i = 1; i <= 2; i++) {
 // let genre = prompt(`Ваш любимый жанр под номером ${i}`);
 // if (genre == '' || genre == null) {
-//   console.log('Вы ввели некорректные данные или не ввели их вовсе');
+//   .log('Вы ввели некорректные данные или не ввели их вовсе');
 //   i--;
 // } else {
 //   personalMovieDB.genres[i - 1] = genre;
@@ -470,7 +470,7 @@
 //         `Введите ваши любимые жанры через запятую`
 //       ).toLowerCase();
 //       if (genre == '' || genre == null) {
-//         console.log('Вы ввели некорректные данные или не ввели их вовсе');
+//         .log('Вы ввели некорректные данные или не ввели их вовсе');
 //         i--;
 //       } else {
 //         personalMovieDB.genres = genres.split(',');
@@ -479,7 +479,7 @@
 //     }
 
 //     personalMovieDB.genres.forEach((el, i) => {
-//       console.log(`Любимый жанр # ${i + 1} - это ${el}`);
+//       .log(`Любимый жанр # ${i + 1} - это ${el}`);
 //     });
 //   },
 // };
@@ -523,7 +523,7 @@
 //   }
 // }
 
-// console.log(isBudgetEnough(shoppingMallData));
+// .log(isBudgetEnough(shoppingMallData));
 // ------------------------------------------------------------------------
 // const students = [
 //   'Peter',
@@ -554,7 +554,7 @@
 //   }
 //   return result;
 // }
-// console.log(sortStudentsByGroups(students));
+// .log(sortStudentsByGroups(students));
 
 // function sortStudentsByGroups(arr) {
 //     arr.sort();
@@ -577,59 +577,7 @@
 // sortStudentsByGroups(students);
 // ----------------------------------------------------------------------------------
 
-// const restorantData = {
-//   menu: [
-//     {
-//       name: 'Salad Caesar',
-//       price: '14$',
-//     },
-//     {
-//       name: 'Pizza Diavola',
-//       price: '9$',
-//     },
-//     {
-//       name: 'Beefsteak',
-//       price: '17$',
-//     },
-//     {
-//       name: 'Napoleon',
-//       price: '7$',
-//     },
-//   ],
-//   waitors: [
-//     { name: 'Alice', age: 22 },
-//     { name: 'John', age: 24 },
-//   ],
-//   averageLunchPrice: '20$',
-//   openNow: true,
-// };
-
-// function isOpen(prop) {
-//   let answer = '';
-//   prop ? (answer = 'Открыто') : (answer = 'Закрыто');
-
-//   return answer;
-// }
-// console.log(isOpen(restorantData.openNow));
-
-// function isAverageLunchPriceTrue(fDish, sDish, average) {
-//   if (parseInt(fDish.price) + parseInt(sDish.price) < parseInt(average)) {
-//     return 'Цена ниже средней';
-//   } else {
-//     return 'Цена выше средней';
-//   }
-// }
-// console.log(
-//   isAverageLunchPriceTrue(
-//     restorantData.menu[0],
-//     restorantData.menu[1],
-//     restorantData.averageLunchPrice
-//   )
-// );
-
-// function transferWaitors(data) {
-//   const copy = Object.assign({}, data);
-
+//
 // Нам просто нужно менять весь массив данных,
 // а не лезть напрямую менять каждого из сотрудников
 // Так как это верхний уровень объекта, то значение
@@ -638,3 +586,42 @@
 //   return copy;
 // }
 // transferWaitors(restorantData);
+
+// const box = document.getElementById('box');
+// btns = document.getElementsByTagName('button');
+// circles = document.getElementsByClassName('circle');
+// wrapper = document.querySelector('.wrapper');
+// hearts = wrapper.querySelectorAll('.heart');
+// oneHeart = wrapper.querySelector('.heart');
+
+// box.style.backgroundColor = 'Blue';
+// box.style.width = '500px';
+// box.style.cssText = 'background-color: blue;width: 500px';
+// btns[2].style.borderRadius = '100%';
+// circles[0].style.backgroundColor = 'red';
+
+// for (let i = 0; i < hearts.length; i++) {
+//   hearts[i].style.backgroundColor = 'green';
+// }
+// hearts.forEach((element) => {
+//   element.style.backgroundColor = 'blue';
+// });
+
+// const div = document.createElement('div');
+// const text = document.createTextNode('Тут был я');
+// div.classList.add('black');
+// wrapper.append(div);
+// wrapper.appendChild(div);
+
+// wrapper.prepend(div);
+
+// hearts[0].before(div);
+// hearts[0].after(div);
+// circles[0].remove();
+// hearts[0].replaceWith(circles[0]);
+// wrapper.replaceChild(circles[0], hearts[0]);
+
+// div.innerHTML = '<h1>Hello world</h1>';
+// div.textContent = 'Hello';
+
+// div.insertAdjacentHTML('beforeend', '<h2>HELLO</h2');
