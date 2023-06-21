@@ -646,37 +646,37 @@
 // console.log(pow(4, 2));
 // console.log(pow(5, 2));
 
-// let students = {
-//   js: [
-//     {
-//       name: 'John',
-//       progress: 100,
-//     },
-//     {
-//       name: 'Ivan',
-//       progress: 60,
-//     },
-//   ],
+let students = {
+  js: [
+    {
+      name: 'John',
+      progress: 100,
+    },
+    {
+      name: 'Ivan',
+      progress: 60,
+    },
+  ],
 
-//   html: {
-//     basic: [
-//       {
-//         name: 'Peter',
-//         progress: 20,
-//       },
-//       {
-//         name: 'Ann',
-//         progress: 18,
-//       },
-//     ],
-//     pro: [
-//       {
-//         name: 'Sam',
-//         progress: 10,
-//       },
-//     ],
-//   },
-// };
+  html: {
+    basic: [
+      {
+        name: 'Peter',
+        progress: 20,
+      },
+      {
+        name: 'Ann',
+        progress: 18,
+      },
+    ],
+    pro: [
+      {
+        name: 'Sam',
+        progress: 10,
+      },
+    ],
+  },
+};
 // function getTotalProgressByIteration(data) {
 //   let total = 0;
 //   let students = 0;
@@ -699,3 +699,19 @@
 //   return total / students;
 // }
 // console.log(getTotalProgressByIteration(students));
+// ----------------------TASK----------
+// function factorial(n) {
+//   if (n <= 0) {
+//     return 1;
+//   }
+//   if (Number.isInteger(n) === false || typeof n !== 'number') {
+//     return 'Вы ввели не правильное число';
+//   }
+//   if (n === 1) {
+//     return n;
+//   } else {
+//     return n * factorial(n - 1);
+//   }
+// }
+
+// console.log(factorial(5));
