@@ -646,37 +646,37 @@
 // console.log(pow(4, 2));
 // console.log(pow(5, 2));
 
-let students = {
-  js: [
-    {
-      name: 'John',
-      progress: 100,
-    },
-    {
-      name: 'Ivan',
-      progress: 60,
-    },
-  ],
+// let students = {
+//   js: [
+//     {
+//       name: 'John',
+//       progress: 100,
+//     },
+//     {
+//       name: 'Ivan',
+//       progress: 60,
+//     },
+//   ],
 
-  html: {
-    basic: [
-      {
-        name: 'Peter',
-        progress: 20,
-      },
-      {
-        name: 'Ann',
-        progress: 18,
-      },
-    ],
-    pro: [
-      {
-        name: 'Sam',
-        progress: 10,
-      },
-    ],
-  },
-};
+//   html: {
+//     basic: [
+//       {
+//         name: 'Peter',
+//         progress: 20,
+//       },
+//       {
+//         name: 'Ann',
+//         progress: 18,
+//       },
+//     ],
+//     pro: [
+//       {
+//         name: 'Sam',
+//         progress: 10,
+//       },
+//     ],
+//   },
+// };
 // function getTotalProgressByIteration(data) {
 //   let total = 0;
 //   let students = 0;
@@ -715,3 +715,17 @@ let students = {
 // }
 
 // console.log(factorial(5));
+
+// function amountOfPages(summary) {
+//   let n = '';
+//   let result = '';
+//   for (let i = 1; i <= summary; i++) {
+//     if (n.length < summary) {
+//       n += i;
+//       result = i;
+//       continue;
+//     }
+//   }
+//   return result;
+// }
+// console.log(amountOfPages(25));
