@@ -729,3 +729,27 @@
 //   return result;
 // }
 // console.log(amountOfPages(25));
+
+// Задание:
+
+// Панграмма — это предложение, в котором каждая буква алфавита встречается хотя бы по одному разу по возможности без повторений. Например, предложение «The quick brown fox jumps over the lazy dog» является панграммой, поскольку в нем хотя бы один раз используются буквы от A до Z (регистр значения не имеет).
+
+// Напишите функцию isPangram, которая принимает в себя строку и возвращает логическое значение. Если строка является панграммой - вернется true, если нет - false.
+
+// Пример:
+
+// isPangram(«The quick brown fox jumps over the lazy dog») => true
+
+// isPangram(«Hello world») => false
+// function isPangram(string) {
+//   let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+//   let regex = /\s/g;
+//   let result = string.toLowerCase().replace(regex, '');
+//   for (let i = 0; i < alphabet.length; i++) {
+//     if (result.indexOf(alphabet[i]) === -1) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isPangram('The quick brown fox jumps over the lazy dog'));
