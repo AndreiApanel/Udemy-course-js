@@ -780,3 +780,11 @@
 // }
 
 // console.log(deepCount([1, 2, [3, 4, [5]]]));
+const btns = document.querySelectorAll('button');
+btns[0].addEventListener('click', () => {
+  if (!btns[1].classList.contains('red')) {
+    btns[1].classList.add('red');
+  } else {
+    btns[1].classList.remove('red');
+  }
+});
