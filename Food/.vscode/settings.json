@@ -1,6 +1,7 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications",
-	"editor.formatOnType": false,
-	"prettier.arrowParens": "always"
+  "editor.formatOnType": false,
+  "prettier.arrowParens": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
