@@ -7,3 +7,5 @@ let observer = new MutationObserver((mutatuionRecords) => {
 });
 
 observer.observe(box, { childList: true });
+
+observer.disconnect();
