@@ -875,7 +875,20 @@
 // 3) this в конструкторах и классах - это новый экземпляр объекта
 // 4) Ручная привязка this: call, apply, bind
 
-const btn = document.querySelector('button');
-btn.addEventListener('click', function () {
-	console.log(this);
-});
+// const btn = document.querySelector('button');
+// btn.addEventListener('click', function () {
+// 	this.style.backgroundColor = 'red';
+// });
+// ---------------------------------------------------------------------------------------
+// const obj = {
+// 	num: 5,
+// 	saynumber: function () {
+// 		const say = () => {
+// 			console.log(this.num);
+// 		};
+// 		say();
+// 	},
+// };
+// obj.saynumber();
+// const double = (a) => a * 2;
+// console.log(double(4));
