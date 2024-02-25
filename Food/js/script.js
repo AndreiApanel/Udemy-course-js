@@ -169,7 +169,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			<div class="menu__item-divider"></div>
 			<div class="menu__item-price">
 				<div class="menu__item-cost">Price:</div>
-				<div class="menu__item-total"><span>${this.price}</span> EUR/day</div>
+				<div class="menu__item-total"><span>${this.price}</span> PLN/day</div>
 			</div>
 		</div>
 `;
@@ -184,6 +184,21 @@ window.addEventListener('DOMContentLoaded', () => {
 		12,
 		'.menu .container'
 	).render();
-
+	new MenuCard(
+		'img/tabs/elite.jpg',
+		'elite',
+		'Menu "Premium"',
+		'In the "Premium" menu we use not only beautiful packaging design,but also the quality of the dishes. Red fish, seafood, fruits - a restaurant menu without going to a restaurant!',
+		30,
+		'.menu .container'
+	).render();
+	new MenuCard(
+		'img/tabs/post.jpg',
+		'vegy',
+		'Menu "Lenten"',
+		'The "Lenten" menu is a careful selection of ingredients: total	no animal products, milk made from almonds,	oats, coconut or buckwheat, the right amount of protein with tofu and imported vegetarian steaks.',
+		20,
+		'.menu .container'
+	).render();
 	
 });
