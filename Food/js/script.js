@@ -2,7 +2,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	// tabs
 	const tabs = document.querySelectorAll('.tabheader__item'),
 		tabsContent = document.querySelectorAll('.tabcontent'),
-		tabsParent = document.querySelector('.tabheader__items');
+		tabsParent = document.querySelector('.tabheader__items'),
+		menuTabs = document.querySelectorAll('.menu__item');
 
 	function hideTabContent() {
 		tabsContent.forEach((item) => {
@@ -143,6 +144,46 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 
 	window.addEventListener('scroll', showModalByScroll);
+	//# 79 Used to clases for the menu
+	class MenuCard {
+		constructor(src, alt, title, descr, price, parentSelector) {
+			this.src = src;
+			this.alt = alt;
+			this.title = title;
+			this.descr = descr;
+			this.price = price;
+			this.parent = document.querySelector(parentSelector);
+			this.transfer = 4;
+			this.changeToPLN();
+		}
+		changeToPLN() {
+			this.price = this.price * this.transfer;
+		}
+		render() {
+			const element = document.createElement('div');
+			element.innerHTML = `
+			<div class="menu__item">
+			<img src=${this.src} alt=${this.alt} />
+			<h3 class="menu__item-subtitle">${this.title}</h3>
+			<div class="menu__item-descr">${this.descr}</div>
+			<div class="menu__item-divider"></div>
+			<div class="menu__item-price">
+				<div class="menu__item-cost">Price:</div>
+				<div class="menu__item-total"><span>${this.price}</span> EUR/day</div>
+			</div>
+		</div>
+`;
+			this.parent.append(element);
+		}
+	}
+	new MenuCard(
+		'img/tabs/very.jpg',
+		'vegy',
+		'Menu "Fitness"',
+		'The "Fitness" menu is a new approach to food preparation: more	fresh fruits and vegetables. The product of active and healthy people. This is absolutely new product with optimal price and high quality!',
+		12,
+		'.menu .container'
+	).render();
+
+	
 });
-//# 79
-const menuTabs = document.querySelectorAll('.menu__item');
