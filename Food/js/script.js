@@ -177,7 +177,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 	new MenuCard(
-		'img/tabs/very.jpg',
+		'img/tabs/vegy.jpg',
 		'vegy',
 		'Menu "Fitness"',
 		'The "Fitness" menu is a new approach to food preparation: more	fresh fruits and vegetables. The product of active and healthy people. This is absolutely new product with optimal price and high quality!',
