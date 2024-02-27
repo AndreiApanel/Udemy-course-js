@@ -146,12 +146,13 @@ window.addEventListener('DOMContentLoaded', () => {
 	window.addEventListener('scroll', showModalByScroll);
 	//# 79 Used to clases for the menu
 	class MenuCard {
-		constructor(src, alt, title, descr, price, parentSelector) {
+		constructor(src, alt, title, descr, price, parentSelector, ...classes) {
 			this.src = src;
 			this.alt = alt;
 			this.title = title;
 			this.descr = descr;
 			this.price = price;
+			this.classes = classes;
 			this.parent = document.querySelector(parentSelector);
 			this.transfer = 4;
 			this.changeToPLN();
@@ -161,8 +162,13 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		render() {
 			const element = document.createElement('div');
-			element.innerHTML = `
-			<div class="menu__item">
+			if (this.classes.length === 0) {
+				this.element = 'menu__item';
+				element.classList.add(this.element);
+			} else {
+				this.classes.forEach((className) => element.classList.add(className));
+			}
+			element.innerHTML = `			
 			<img src=${this.src} alt=${this.alt} />
 			<h3 class="menu__item-subtitle">${this.title}</h3>
 			<div class="menu__item-descr">${this.descr}</div>
@@ -171,8 +177,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				<div class="menu__item-cost">Price:</div>
 				<div class="menu__item-total"><span>${this.price}</span> PLN/day</div>
 			</div>
-		</div>
-`;
+			`;
 			this.parent.append(element);
 		}
 	}
@@ -182,7 +187,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		'Menu "Fitness"',
 		'The "Fitness" menu is a new approach to food preparation: more	fresh fruits and vegetables. The product of active and healthy people. This is absolutely new product with optimal price and high quality!',
 		12,
-		'.menu .container'
+		'.menu .container',
+		'menu__item',
+		'big'
 	).render();
 	new MenuCard(
 		'img/tabs/elite.jpg',
@@ -190,7 +197,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		'Menu "Premium"',
 		'In the "Premium" menu we use not only beautiful packaging design,but also the quality of the dishes. Red fish, seafood, fruits - a restaurant menu without going to a restaurant!',
 		30,
-		'.menu .container'
+		'.menu .container',
+		'menu__item'
 	).render();
 	new MenuCard(
 		'img/tabs/post.jpg',
@@ -198,7 +206,8 @@ window.addEventListener('DOMContentLoaded', () => {
 		'Menu "Lenten"',
 		'The "Lenten" menu is a careful selection of ingredients: total	no animal products, milk made from almonds,	oats, coconut or buckwheat, the right amount of protein with tofu and imported vegetarian steaks.',
 		20,
-		'.menu .container'
+		'.menu .container',
+		'menu__item'
 	).render();
 	
 });
