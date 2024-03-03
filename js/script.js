@@ -950,18 +950,19 @@
 
 // #82 JSON.
 
-const persone = {
-	name: 'Alex',
-	tel: '+48706555',
-	parents:{
-		mom:'Olga',
-		dad:'Mike'
-	}
+// const persone = {
+// 	name: 'Alex',
+// 	tel: '+48706555',
+// 	parents:{
+// 		mom:'Olga',
+// 		dad:'Mike'
+// 	}
 
-};
+// };
 
-const clone = JSON.parse(JSON.stringify(persone))
+// const clone = JSON.parse(JSON.stringify(persone))
 
-clone.parents.mom = 'Ann'
-console.log(persone);
-console.log(clone);
+// clone.parents.mom = 'Ann'
+// console.log(persone);
+// console.log(clone);
+// #83 AJAX
