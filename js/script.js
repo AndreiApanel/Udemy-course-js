@@ -970,12 +970,16 @@ const inputPln = document.querySelector('#pln'),
 	inputUsd = document.querySelector('#usd');
 inputPln.addEventListener('input', () => {
 	const request = new XMLHttpRequest();
-	request.open('GET', current.js);
+	request.open('GET', 'current1.json');
 	request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 	request.send();
-	request.addEventListener('readystatechange', () => {
-		if (request.readyState === 4 && request.status === 200) {
+	request.addEventListener('load', () => {
+		if (request.status === 200) {
 			console.log(request.response);
+			const data = JSON.parse(request.response);
+			inputUsd.value = (+inputPln.value / data.current.usd).toFixed(2);
+		} else {
+			inputUsd.value = 'Error';
 		}
 	});
 	//status
