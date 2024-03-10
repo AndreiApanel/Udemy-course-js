@@ -212,20 +212,28 @@ window.addEventListener('DOMContentLoaded', () => {
 	// Forms
 
 	const forms = document.querySelectorAll('form');
-
-	function postData(form) {
-		form.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const request = new XMLHttpRequest();
-			request.open('POST', 'server.php');
-			request.setRequestHeader('Content-type', 'multipart/form-data');
-			const formData = new FormData(form);
-			request.send(formData);
-			request.addEventListener('load', () => {
-				if (request.status === 200) {
-					console.log(request.response);
-				}
-			});
+const message = {
+	loading: 'Loading',
+	success: 'Success',
+	failure: 'Failure',
+};
+function postData(form) {
+	form.addEventListener('submit', (e) => {
+		const stasusMessage = document.createElement('div');
+		stasusMessage.classList.add('status');
+		stasusMessage.textContent = 'loading';
+		e.preventDefault();
+		const request = new XMLHttpRequest();
+		request.open('POST', 'server.php');
+		request.setRequestHeader('Content-type', 'multipart/form-data');
+		const formData = new FormData(form);
+		request.send(formData);
+		request.addEventListener('load', () => {
+			if (request.status === 200) {
+				console.log(request.response);
+				stasusMessage.textContent = 'success';
+			}
 		});
-	}
+	});
+}
 });
