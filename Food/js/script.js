@@ -217,11 +217,15 @@ const message = {
 	success: 'Success',
 	failure: 'Failure',
 };
+
+forms.forEach((item) => {
+	postData(item);
+});
 function postData(form) {
 	form.addEventListener('submit', (e) => {
 		const stasusMessage = document.createElement('div');
 		stasusMessage.classList.add('status');
-		stasusMessage.textContent = 'loading';
+		stasusMessage.textContent = message.loading;
 		e.preventDefault();
 		const request = new XMLHttpRequest();
 		request.open('POST', 'server.php');
@@ -231,7 +235,9 @@ function postData(form) {
 		request.addEventListener('load', () => {
 			if (request.status === 200) {
 				console.log(request.response);
-				stasusMessage.textContent = 'success';
+				stasusMessage.textContent = message.success;
+			} else {
+				stasusMessage.textContent = message.failure;
 			}
 		});
 	});
