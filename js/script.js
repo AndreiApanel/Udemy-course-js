@@ -1081,3 +1081,54 @@
 // .map(item =>item[0])
 
 // console.log(newArr);
+//# 20 Task
+// const films = [
+// 	{
+// 			name: 'Titanic',
+// 			rating: 9
+// 	},
+// 	{
+// 			name: 'Die hard 5',
+// 			rating: 5
+// 	},
+// 	{
+// 			name: 'Matrix',
+// 			rating: 8
+// 	},
+// 	{
+// 			name: 'Some bad film',
+// 			rating: 4
+// 	}
+// ];
+// #1
+// function showGoodFilms(arr) {
+// 	arr.filter (item=>
+// 	item.rating >= 8)
+// }
+// console.log(showGoodFilms(films));
+// #2
+// function showListOfFilms(arr) {
+// 	const newS = arr.map(e=>e.name).join(', ')
+// return newS
+// }
+// console.log(showListOfFilms(films));
+// #3
+// function setFilmsIds(arr) {
+	
+// 	return arr.map((film,i) =>{
+// 		film.id = i;
+// 		return film
+// 		})
+// }
+
+// console.log(setFilmsIds(films))
+// # 4
+// При срабатывании every на первом фильме он натыкается на id = 0;
+// 0 - это неправда в логическом ключе, поэтому и весь метод возвращает false
+// Учитывайте этот момент
+// const tranformedArray = setFilmsIds(films);
+
+// function checkFilms(arr) {
+// 	return arr.every(item =>item.id || item.id === 0 ? true : false)
+// }
+// console.log(checkFilms(tranformedArray));
