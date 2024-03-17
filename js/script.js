@@ -1034,6 +1034,50 @@
 // 	console.log(('all'));
 // });
 	
+//# 88 Array enumeration methods
 
+// filter
 
+// const names = ['Ivan','Ann','Ksenia','Voldemat'];
+// const shortNames = names.filter(function (name) {
+// 	return name.length < 5;
+// });
+// console.log(shortNames);
 
+// map
+
+// const answers = ['IvAn','AnnA','Hello'];
+
+// const result =  answers.map(item => item.toLowerCase());
+// console.log(result);
+
+// every/some
+
+// const some = [4,'wqqw','dsaasda'];
+// console.log(some.some(item=>typeof(item)=== 'number'));
+
+// const every = [4,7,8];
+// console.log(every.every(item=>typeof(item)=== 'number'));
+
+// reduce
+
+// const arr = [1,2,3,4,5,6,7,8];
+
+// const res = arr.reduce((sum,current) => sum + current)
+// console.log(res);
+// const arr = ['apple','orange','plum']
+
+// const res = arr.reduce((sum,current) => `${sum}, ${current}`)
+// console.log(res);
+
+// const obj = {
+// 	ivan:'persone',
+// 	ann:'persone',
+// 	dog:'animal',
+// 	cat:'animal'
+// };
+// const newArr = Object.entries(obj)
+// .filter(item =>item[1] === 'persone')
+// .map(item =>item[0])
+
+// console.log(newArr);
