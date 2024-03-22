@@ -1135,31 +1135,28 @@
 
 // # 21 Task
 
-const funds = [
-	{amount: -1400},
-	{amount: 2400},
-	{amount: -1000},
-	{amount: 500},
-	{amount: 10400},
-	{amount: -11400}
-];
+// const funds = [
+// 	{amount: -1400},
+// 	{amount: 2400},
+// 	{amount: -1000},
+// 	{amount: 500},
+// 	{amount: 10400},
+// 	{amount: -11400}
+// ];
 
-const getPositiveIncomeAmount = (data) => {
-	return data.filter(item => item.amount >= 0).map((e) =>e.amount).reduce((sum, item) => sum + item);
+// const getPositiveIncomeAmount = (data) => {
+// 	return data.filter(item => item.amount >= 0).map((e) =>e.amount).reduce((sum, item) => sum + item);
 
-}
+// }
 
-console.log(getPositiveIncomeAmount(funds));
+// console.log(getPositiveIncomeAmount(funds));
 
-const getTotalIncomeAmount = (data) => {
-	return data.some(function (item) {
-		item.amount < 0
-			? data
-					.map((e) => e.amount)
-					.reduce((sum, item) => {
-						sum + item;
-					})
-			: getPositiveIncomeAmount(funds);
-	});
-};
-console.log(getTotalIncomeAmount(funds));
+// const getTotalIncomeAmount = (data) => {
+// 	if (data.some((item) => item.amount < 0 || item.amount === 0)) {
+// 		return data.map((e) => e.amount).reduce((sum, item) => sum + item);
+// 	} else {
+// 		return getPositiveIncomeAmount(funds);
+// 	}
+// }
+
+// console.log(getTotalIncomeAmount(funds));
