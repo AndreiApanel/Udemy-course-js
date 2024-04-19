@@ -1167,44 +1167,59 @@
 //  localStorage.removeItem('number');
 //  localStorage.clear();
 //  console.log(localStorage('number'));
-const checkbox = document.querySelector('#checkbox'),
-	form = document.querySelector('form'),
-	change = document.querySelector('#color');
+// const checkbox = document.querySelector('#checkbox'),
+// 	form = document.querySelector('form'),
+// 	change = document.querySelector('#color');
 
-	if(localStorage.getItem('bg') === 'changed')
-	{
+// 	if(localStorage.getItem('bg') === 'changed')
+// 	{
 	 
-	 form.style.backgroundColor = 'red'
-	}
+// 	 form.style.backgroundColor = 'red'
+// 	}
 
-if(localStorage.getItem('isChecked')) {
-checkbox.checked = true;
-}
-
-
-
-change.addEventListener('click', () => {
-	if(localStorage.getItem('bg') === 'changed')
-	 {
-		localStorage.removeItem('bg');
-		form.style.backgroundColor = 'white'
-	}else{
-		localStorage.setItem('bg', 'changed');
-		form.style.backgroundColor = 'red'
-	}
-}
-);
-
-checkbox.addEventListener('change', () => {
-	localStorage.setItem('isChecked', true);
-})
+// if(localStorage.getItem('isChecked')) {
+// checkbox.checked = true;
+// }
 
 
-const persone = {
-	name: 'Alexander',
-	age: 25
-};
 
-const serializedPersone = JSON.stringify(persone);
-localStorage.setItem('alex',serializedPersone);
-console.log(JSON.parse(localStorage.getItem('alex')));
+// change.addEventListener('click', () => {
+// 	if(localStorage.getItem('bg') === 'changed')
+// 	 {
+// 		localStorage.removeItem('bg');
+// 		form.style.backgroundColor = 'white'
+// 	}else{
+// 		localStorage.setItem('bg', 'changed');
+// 		form.style.backgroundColor = 'red'
+// 	}
+// }
+// );
+
+// checkbox.addEventListener('change', () => {
+// 	localStorage.setItem('isChecked', true);
+// })
+
+
+// const persone = {
+// 	name: 'Alexander',
+// 	age: 25
+// };
+
+// const serializedPersone = JSON.stringify(persone);
+// localStorage.setItem('alex',serializedPersone);
+// console.log(JSON.parse(localStorage.getItem('alex')));
+
+// #96 regular expressions
+
+// new RedExp('pattern', 'flags')
+// /pattern/f
+
+const ans = prompt('Write your name');
+
+const reg = /n/i;
+// i - независимо от регистра
+// g - сразу несколько
+// m - многострочный режим
+// console.log(ans.search(reg));
+console.log(ans.match(reg));
+
