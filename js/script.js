@@ -1214,12 +1214,32 @@
 // new RedExp('pattern', 'flags')
 // /pattern/f
 
-const ans = prompt('Write your name');
+// const ans = prompt('Write your name');
 
-const reg = /n/i;
+// const reg = /n/i;
 // i - независимо от регистра
 // g - сразу несколько
 // m - многострочный режим
 // console.log(ans.search(reg));
-console.log(ans.match(reg));
+// console.log(ans.match(reg));
+// const pass = prompt('Write your password');
+// console.log(pass.replace(/./g,"*"));
 
+// console.log('12-34-56'.replace(/-/g,":"));
+
+// const ans = prompt('Write your password');
+// const reg = /n/ig;
+// console.log(reg.test(ans));
+
+// \d - digital
+// \w - word
+// \s - spaces
+
+// const ans = prompt('Write your digital');
+// const reg = /\d/g;
+// console.log(ans.match(reg));
+// const str = 'My name is R2D2';
+// console.log(str.match(/\D/ig));
+
+// \D - no digital
+// \W - no word
