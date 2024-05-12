@@ -1243,3 +1243,21 @@
 
 // \D - no digital
 // \W - no word
+
+// #99 GET and SET of the objects
+
+// const persone = {
+// 		name: 'Alex',
+// 		age:25,
+
+// 		get userAge() {
+// 			return this.age;
+// 		},
+
+// 		set userAge(num) {
+// 			this.age = num;
+// 		}
+// }
+
+// console.log(persone.userAge = 30);
+// console.log(persone.userAge);
