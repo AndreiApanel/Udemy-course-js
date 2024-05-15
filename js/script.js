@@ -1033,7 +1033,7 @@
 // Promise.race ([test(1000), test(2000)]).then(()=> {
 // 	console.log(('all'));
 // });
-	
+
 //# 88 Array enumeration methods
 
 // filter
@@ -1114,7 +1114,7 @@
 // console.log(showListOfFilms(films));
 // #3
 // function setFilmsIds(arr) {
-	
+
 // 	return arr.map((film,i) =>{
 // 		film.id = i;
 // 		return film
@@ -1173,15 +1173,13 @@
 
 // 	if(localStorage.getItem('bg') === 'changed')
 // 	{
-	 
+
 // 	 form.style.backgroundColor = 'red'
 // 	}
 
 // if(localStorage.getItem('isChecked')) {
 // checkbox.checked = true;
 // }
-
-
 
 // change.addEventListener('click', () => {
 // 	if(localStorage.getItem('bg') === 'changed')
@@ -1198,7 +1196,6 @@
 // checkbox.addEventListener('change', () => {
 // 	localStorage.setItem('isChecked', true);
 // })
-
 
 // const persone = {
 // 	name: 'Alexander',
@@ -1261,3 +1258,53 @@
 
 // console.log(persone.userAge = 30);
 // console.log(persone.userAge);
+// #100 Encapsulation
+
+// class User {
+// 	constructor(name, age,surname) {
+// 		// this.name = name;
+// 		// this.age = age;
+// 		this.name = name;
+// 		this._age = age;
+// 		this.#surname = surname;
+// 	}
+
+// 	say = () => {
+// 		console.log(`Name user: ${this.name}${this.#surname}, age ${this._age}`);
+// 	}
+// 	get age() {
+// 		return this._age;
+// 	}
+// 	set age(age) {
+// 		if (typeof age === 'number' && age > 0 && age < 110) {
+// 			this._age = age;
+// 		} else {
+// 			console.log('Wrong!');
+// 		}
+// 	}
+// 	get #surname() {
+// 		return this.surname
+// 	}
+// 	set #surname (surname) {
+// 		if (typeof surname === 'string') {
+// 			this.surname = surname
+// 		} else {
+// 			console.log('Wrong!');
+// 		}
+// 	}
+// }
+
+// const ivan = new User('Ivan', 27,'Kozel');
+// ivan.say();
+// ivan.surname = 'Apashel'
+// console.log(ivan.surname);
+
+// // console.log(ivan._age);
+// // ivan._age = 99;
+// // console.log(ivan._age);
+// ivan.say();
+// console.log(ivan.getAge());
+// ivan.setAge(30);
+// ivan.setAge(300);
+// console.log(ivan.getAge());
+
