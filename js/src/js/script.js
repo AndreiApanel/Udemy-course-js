@@ -1328,7 +1328,7 @@
 
 // user.sayHello()
 // #102 Webpack
-const myModule = require('./main');
+const myModule = require('../../main');
 const myModuleInstance = new myModule();
 myModuleInstance.hello();
 myModuleInstance.goodbye();
