@@ -1357,3 +1357,34 @@
 
 // }
 // console.log('normal');
+// #106 Creating your own mistakes
+const data = [
+	{
+		id:'box',
+		tad:'div'
+	},
+	{
+		id:'',
+		tad:'nav'
+	},
+	{
+		id:'circle',
+		tad:'span'
+	}
+]
+
+try {
+	data.forEach (blockObj => {
+		const block = document.createElement(blockObj.tag);
+		if (!blockObj.id) throw new SyntaxError(`There is no individual identifier in the data under the number ${i + 1}`);
+		block.setAttribute('id', blockObj.id);
+		document.body.append(block);
+	})
+} catch (e) {
+	if (e.name === 'SyntaxError') {
+	console.log(e.message);
+	} else throw e
+
+}
+// const err = new Error ('sdada')
+// console.log(err.name, err.stack, err.message);
