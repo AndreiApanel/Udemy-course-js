@@ -1328,10 +1328,32 @@
 
 // user.sayHello();
 // #102 Webpack
-const myModule = require('./js/main');
-const myModuleInstance = new myModule();
-myModuleInstance.hello();
-myModuleInstance.goodbye();
+// const myModule = require('./js/main');
+// const myModuleInstance = new myModule();
+// myModuleInstance.hello();
+// myModuleInstance.goodbye();
 // gulp - планировщик задач,
 // webpack - сборщик модулей,
 // их можно комбинировать
+// # 105 Mistakes. Code breakage
+// 'use strict';
+// try {
+// 	console.log('Normal');
+// 	console.log(a);
+// 	console.log('result');
+// 	} catch(error) {
+// 		console.log(error.name);
+// 		console.log(error.message);
+// 		console.log(error.stack);
+// 	} finally {
+
+// 	}
+// 	console.log('still normal');
+// try {
+// 	document.querySelector('.active').addEventListener('click', () => {
+// 		console.log('click');
+// 		});
+// } catch (e) {
+
+// }
+// console.log('normal');

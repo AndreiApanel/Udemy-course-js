@@ -1,10 +1,10 @@
-// #102 Webpack
-function myModule() {
-	this.hello = function () {
-		console.log('hello');
-	};
-	this.goodbye = function () {
-		console.log('bye');
-	};
+// #102 ES6 Module
+export let one = 1;
+let two = 2;
+
+export { two };
+
+export default function sayHi() {
+	console.log('hello');
 }
-module.exports = myModule;
+// only ONE default export

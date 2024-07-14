@@ -1,8 +1,11 @@
-// #102 Webpack
-const myModule = require('./main');
-const myModuleInstance = new myModule();
-myModuleInstance.hello();
-myModuleInstance.goodbye();
-// gulp - планировщик задач,
-// webpack - сборщик модулей,
-// их можно комбинировать
+// #102 ES6 Module
+// import { one, two } from './main';
+import sayHi from './main.js';
+import * as data from './main.js';
+// all import
+console.log(`${data.one} and ${data.two}`);
+// data.sayHi();
+sayHi();
+// import { one, as first} from './main'; rename
+
+// console.log(`${one} and ${two}`);
