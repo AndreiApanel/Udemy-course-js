@@ -1358,33 +1358,60 @@
 // }
 // console.log('normal');
 // #106 Creating your own mistakes
-const data = [
-	{
-		id:'box',
-		tad:'div'
-	},
-	{
-		id:'',
-		tad:'nav'
-	},
-	{
-		id:'circle',
-		tad:'span'
-	}
-]
+// const data = [
+// 	{
+// 		id:'box',
+// 		tad:'div'
+// 	},
+// 	{
+// 		id:'',
+// 		tad:'nav'
+// 	},
+// 	{
+// 		id:'circle',
+// 		tad:'span'
+// 	}
+// ]
 
-try {
-	data.forEach (blockObj => {
-		const block = document.createElement(blockObj.tag);
-		if (!blockObj.id) throw new SyntaxError(`There is no individual identifier in the data under the number ${i + 1}`);
-		block.setAttribute('id', blockObj.id);
-		document.body.append(block);
-	})
-} catch (e) {
-	if (e.name === 'SyntaxError') {
-	console.log(e.message);
-	} else throw e
+// try {
+// 	data.forEach (blockObj => {
+// 		const block = document.createElement(blockObj.tag);
+// 		if (!blockObj.id) throw new SyntaxError(`There is no individual identifier in the data under the number ${i + 1}`);
+// 		block.setAttribute('id', blockObj.id);
+// 		document.body.append(block);
+// 	})
+// } catch (e) {
+// 	if (e.name === 'SyntaxError') {
+// 	console.log(e.message);
+// 	} else throw e
 
-}
+// }
 // const err = new Error ('sdada')
 // console.log(err.name, err.stack, err.message);
+// #110.Function generators
+// function* generator () {
+// 	yield 'S';
+// 	yield 'c'
+// 	yield 'r'
+// 	yield 'i'
+// 	yield 'p'
+// 	yield 't'
+// }
+
+// const str = generator();
+// console.log(str.next().value);
+// function* count(n) {
+// 	for (let i = 0; i < n; i++) {
+// 		yield i;
+// 	}
+// };
+
+// for (let k of count(7)) {
+// console.log(k);
+
+// }
+
+// const counter = count(7)
+// console.log(counter.next().value);
+// console.log(counter.next().value);
+// console.log(counter.next().value);
