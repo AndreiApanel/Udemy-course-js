@@ -1417,14 +1417,22 @@
 // console.log(counter.next().value);
 //#22 (**).function compositions.
 
-const multiply20 = (price) => price * 20;
-const divide100 = (price) => price / 100;
-const normalizePrice = (price) => price.toFixed(2);
-let price = 200;
-const compose = 
-(...fns) => 
-	(price) => 
-fns.reduceRight((prev,fn)=> fn(prev), price)
-const discount = compose(normalizePrice, divide100, multiply20);
-console.log(
-	discount(200))
+// const multiply20 = (price) => price * 20;
+// const divide100 = (price) => price / 100;
+// const normalizePrice = (price) => price.toFixed(2);
+// let price = 200;
+// const compose = 
+// (...fns) => 
+// 	(price) => 
+// fns.reduceRight((prev,fn)=> fn(prev), price)
+
+// const discount = compose(normalizePrice, divide100, multiply20);
+// console.log(
+// 	discount(200))
+// const add1 = function(a){return a + 1}
+// const addAll3 = function(a,b,c){return a + b + c}
+
+// const composeWithArgs = (...fns) => 
+// fns.reduceRight ((prev,fn)=> (...arg) => fn(prev(...arg)));
+
+// console.log(composeWithArgs(add1,addAll3)(1,2,3))
