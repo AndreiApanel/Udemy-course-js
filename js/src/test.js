@@ -1415,3 +1415,16 @@
 // console.log(counter.next().value);
 // console.log(counter.next().value);
 // console.log(counter.next().value);
+//#22 (**).function compositions.
+
+const multiply20 = (price) => price * 20;
+const divide100 = (price) => price / 100;
+const normalizePrice = (price) => price.toFixed(2);
+let price = 200;
+const compose = 
+(...fns) => 
+	(price) => 
+fns.reduceRight((prev,fn)=> fn(prev), price)
+const discount = compose(normalizePrice, divide100, multiply20);
+console.log(
+	discount(200))
