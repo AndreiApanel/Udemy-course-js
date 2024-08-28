@@ -1436,3 +1436,15 @@
 // fns.reduceRight ((prev,fn)=> (...arg) => fn(prev(...arg)));
 
 // console.log(composeWithArgs(add1,addAll3)(1,2,3))
+// 113. Event loop.Stack
+// console.log(1);
+// setTimeout(() => {console.log('timeout');
+// },2000)
+// setTimeout(() => {
+// console.log('timeout_4000');
+// },4000)
+// console.log(2);
+// setTimeout (() => {
+// 	console.log('1');
+// },0); 4 sec default timeout
+// console.log('2'); first
