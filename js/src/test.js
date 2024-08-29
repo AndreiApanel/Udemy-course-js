@@ -1448,3 +1448,16 @@
 // 	console.log('1');
 // },0); 4 sec default timeout
 // console.log('2'); first
+// 114.Macro and Micro Tasks
+
+// setTimeout(() => console.log('timeout'));third
+// Promise.resolve().then(() =>console.log('promise'));second
+// Promise.resolve().then(() =>console.log('promise'));second
+// queueMicrotask(() => console.log('wow'))second
+// console.log('code'); first
+
+// () => {}
+// microtasks: then/catch/finally/await
+// render
+// () => {}
+// microtasks: then/catch/finally/await
