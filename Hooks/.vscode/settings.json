@@ -1,0 +1,7 @@
+{
+	"editor.cursorStyle": "line",
+	"editor.hideCursorInOverviewRuler": false,
+	"editor.overtypeCursorStyle": "line",
+	"editor.cursorBlinking": "smooth",
+	"editor.fontFamily": "Consolas, 'Courier New', monospace"
+}
