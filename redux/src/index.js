@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {configureStore} from '@reduxjs/toolkit';
+import {configureStore, bindActionCreators} from '@reduxjs/toolkit';
 import reducer from './reducer';
-import {inc, dec, rnd} from './actions';
+import * as actions from './actions';
 
 const store = configureStore({reducer});
 const {dispatch, subscribe, getState} = store;
@@ -12,27 +12,22 @@ const update = () => {
 };
 
 subscribe(update);
-const bindActions =
-  (creator, dispatch) =>
-  (...args) => {
-    dispatch(creator(...args));
-  };
 
-const incDispatch = bindActions(inc, dispatch);
-const decDispatch = bindActions(dec, dispatch);
-const rndDispatch = bindActions(rnd, dispatch);
+// const bindActionCreator =
+//   (creator, dispatch) =>
+//   (...args) => {
+//     dispatch(creator(...args));
+//   };
 
-document.getElementById('inc').addEventListener('click', () => {
-  incDispatch();
-});
+const {inc, dec, rnd} = bindActionCreators(actions, dispatch);
 
-document.getElementById('dec').addEventListener('click', () => {
-  decDispatch();
-});
+document.getElementById('inc').addEventListener('click', inc);
+
+document.getElementById('dec').addEventListener('click', dec);
 
 document.getElementById('rnd').addEventListener('click', () => {
   const value = Math.floor(Math.random() * 10);
-  rndDispatch(value);
+  rnd(value);
 });
 
 // let state = reducer(initialState, {type: 'INC'});
