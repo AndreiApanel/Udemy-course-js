@@ -1,30 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {configureStore, bindActionCreators} from '@reduxjs/toolkit';
 import reducer from './reducer';
 import * as actions from './actions';
-import Counter from './Counter';
+import Counter from './components/Counter';
 
 const store = configureStore({reducer});
 const {dispatch, subscribe, getState} = store;
 const {inc, dec, rnd} = bindActionCreators(actions, dispatch);
-
+const root = createRoot(document.getElementById('root'));
 const update = () => {
-  ReactDOM.render(
+  root.render(
     <React.StrictMode>
-      <>
-        <Counter
-          counter={getState().value}
-          inc={inc}
-          dec={dec}
-          rnd={() => {
-            const value = Math.floor(Math.random() * 10);
-            rnd(value);
-          }}
-        />
-      </>
+      <Counter
+        counter={getState().value}
+        inc={inc}
+        dec={dec}
+        rnd={() => {
+          const value = Math.floor(Math.random() * 10);
+          rnd(value);
+        }}
+      />
     </React.StrictMode>,
-    document.getElementById('root'),
   );
 };
 //   document.getElementById('counter').textContent = getState().value;
