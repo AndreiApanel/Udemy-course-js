@@ -4,8 +4,11 @@ import {configureStore} from '@reduxjs/toolkit';
 import reducer from './reducer';
 import {Provider} from 'react-redux';
 import App from './components/App';
+
 const store = configureStore({reducer});
+
 const root = createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
