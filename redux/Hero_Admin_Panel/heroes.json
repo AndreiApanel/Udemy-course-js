@@ -1,15 +1,9 @@
 {
   "heroes": [
     {
-      "id": 2,
-      "name": "Неизвестный герой",
-      "description": "Скрывающийся в тени",
-      "element": "wind"
-    },
-    {
-      "id": 3,
-      "name": "Морской герой",
-      "description": "Как аквамен, но не из DC",
+      "id": "e6d73840-bba4-48f6-ba8d-08a61820862c",
+      "name": "1",
+      "description": "dd",
       "element": "water"
     }
   ],
