@@ -1,7 +1,7 @@
 import {useHttp} from '../../hooks/http.hook';
 import {useCallback, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-
+import {createSelector} from 'reselect';
 import {heroesFetching, heroesFetched, heroesFetchingError, heroDeleted} from '../../actions';
 import HeroesListItem from '../heroesListItem/HeroesListItem';
 import Spinner from '../spinner/Spinner';
@@ -12,10 +12,23 @@ import Spinner from '../spinner/Spinner';
 // Удаление идет и с json файла при помощи метода DELETE
 
 const HeroesList = () => {
+  const filteredHeroesSelector = createSelector(
+    state => state.filters.activeFilter,
+    state => state.heroes.heroes,
+    (activeFilter, heroes) => {
+      if (activeFilter === 'all') {
+        return heroes;
+      } else {
+        return heroes.filter(item => item.element === activeFilter);
+      }
+    },
+  );
+
+  const filteredHeroes = useSelector(filteredHeroesSelector);
+  const heroesLoadingStatus = useSelector(state => state.heroes.heroesLoadingStatus);
+
   const dispatch = useDispatch();
   const {request} = useHttp();
-
-  const {filteredHeroes, heroesLoadingStatus} = useSelector(state => state);
 
   useEffect(() => {
     dispatch(heroesFetching());
@@ -28,10 +41,7 @@ const HeroesList = () => {
   const onDelete = useCallback(
     id => {
       request(`http://localhost:3001/heroes/${id}`, 'DELETE')
-        .then(data => {
-          console.log(data, 'Deleted');
-          dispatch(heroDeleted(id));
-        })
+        .then(() => dispatch(heroDeleted(id)))
         .catch(err => console.log(err));
     },
     [request, dispatch],

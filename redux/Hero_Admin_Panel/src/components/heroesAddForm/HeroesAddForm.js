@@ -37,11 +37,8 @@ const HeroesAddForm = () => {
       .catch(err => console.error(err));
     setForm({name: '', description: '', element: ''});
   };
-  // get filters from Redux state
-  const {filters, filtersLoadingStatus} = useSelector(state => ({
-    filters: state.filters || [],
-    filtersLoadingStatus: state.filtersLoadingStatus,
-  }));
+
+  const {filters, filtersLoadingStatus} = useSelector(state => state.filters);
 
   const renderFilters = (filters, status) => {
     if (status === 'loading') {
