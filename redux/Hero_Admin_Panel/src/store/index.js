@@ -1,5 +1,4 @@
-import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
-import {thunk} from 'redux-thunk';
+import {configureStore} from '@reduxjs/toolkit';
 import heroes from '../reducers/heroes';
 import filters from '../reducers/filters';
 
@@ -10,23 +9,24 @@ const stringMiddleware = store => next => action => {
   return next(action);
 };
 
-const rootReducer = combineReducers({
-  heroes,
-  filters,
-});
-
 // Compose middlewares and devtools
-const middlewareEnhancer = applyMiddleware(thunk, stringMiddleware);
-const composedEnhancer = compose(
-  middlewareEnhancer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
-);
+// const composedEnhancer = compose(
+//   middlewareEnhancer,
+//   window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,
+// );
 
-const store = createStore(
-  rootReducer,
-  undefined,
+// const store = createStore(
+//   rootReducer,
+//   undefined,
 
-  composedEnhancer,
-);
-
+//   composedEnhancer,
+// );
+const store = configureStore({
+  reducer: {
+    heroes,
+    filters,
+  },
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(stringMiddleware),
+  devTools: process.env.NODE_ENV !== 'production',
+});
 export default store;
