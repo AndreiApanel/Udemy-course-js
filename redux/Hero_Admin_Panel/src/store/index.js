@@ -1,6 +1,13 @@
-import {configureStore, combineReducers, compose} from '@reduxjs/toolkit';
+import {configureStore, combineReducers, applyMiddleware} from '@reduxjs/toolkit';
 import heroes from '../reducers/heroes';
 import filters from '../reducers/filters';
+
+const stringMiddleware = () => next => action => {
+  if (typeof action === 'string') {
+    return next({type: action});
+  }
+  return next(action);
+};
 
 const rootReducer = combineReducers({
   heroes,
@@ -24,6 +31,7 @@ const enhancer =
 
 const store = configureStore({
   reducer: rootReducer,
+  applyMiddleware: stringMiddleware,
   enhancers: getDefaultEnhancers => getDefaultEnhancers().concat(enhancer),
   devTools: process.env.NODE_ENV !== 'production',
 });
