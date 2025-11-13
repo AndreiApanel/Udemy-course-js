@@ -1,12 +1,5 @@
 {
-  "heroes": [
-    {
-      "id": "a4945304-d1ef-421b-8052-35b7fa89dd00",
-      "name": "s",
-      "description": "ss",
-      "element": "fire"
-    }
-  ],
+  "heroes": [],
   "filters": [
     {
       "name": "all",
