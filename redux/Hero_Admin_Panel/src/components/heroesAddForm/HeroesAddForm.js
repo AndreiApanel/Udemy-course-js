@@ -11,14 +11,18 @@
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 // import {heroCreated} from '../../actions';
-import {heroCreated} from '../heroesList/heroesSlice';
 import {v4 as uuidv4} from 'uuid';
 import {useHttp} from '../../hooks/http.hook';
+import {selectAll} from '../heroesFilters/filtersSlice';
+import {heroCreated} from '../heroesList/heroesSlice';
+import store from '../../store';
 
 const HeroesAddForm = () => {
   const [form, setForm] = useState({name: '', description: '', element: ''});
   const dispatch = useDispatch();
   const {request} = useHttp();
+  const filters = selectAll(store.getState());
+  const {filtersLoadingStatus} = useSelector(state => state.filters);
 
   const onInputChange = e => {
     const {name, value} = e.target;
@@ -38,8 +42,6 @@ const HeroesAddForm = () => {
       .catch(err => console.error(err));
     setForm({name: '', description: '', element: ''});
   };
-
-  const {filters, filtersLoadingStatus} = useSelector(state => state.filters);
 
   const renderFilters = (filters, status) => {
     if (status === 'loading') {
