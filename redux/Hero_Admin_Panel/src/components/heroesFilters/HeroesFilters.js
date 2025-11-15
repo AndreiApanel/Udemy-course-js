@@ -1,7 +1,7 @@
+import {useHttp} from '../../hooks/http.hook';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {useHttp} from '../../hooks/http.hook';
-import {fetchFilters, activeFilterChanged} from '../../actions';
+import {filtersChanged, fetchFilters} from './filtersSlice';
 import classNames from 'classnames';
 import Spinner from '../spinner/Spinner';
 // Задача для этого компонента:
@@ -18,7 +18,8 @@ const HeroesFilters = () => {
 
   useEffect(() => {
     dispatch(fetchFilters(request));
-  }, [dispatch, request]);
+    // eslint-disable-next-line
+  }, []);
 
   if (filtersLoadingStatus === 'loading') {
     return <Spinner />;
@@ -34,7 +35,7 @@ const HeroesFilters = () => {
         active: name === activeFilter,
       });
       return (
-        <button key={name} id={name} className={btnClass} onClick={() => dispatch(activeFilterChanged(name))}>
+        <button key={name} id={name} className={btnClass} onClick={() => dispatch(filtersChanged(name))}>
           {label}
         </button>
       );
