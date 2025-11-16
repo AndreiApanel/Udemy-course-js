@@ -9,20 +9,21 @@
 // данных из фильтров
 
 import {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 // import {heroCreated} from '../../actions';
 import {v4 as uuidv4} from 'uuid';
-import {useHttp} from '../../hooks/http.hook';
 import {selectAll} from '../heroesFilters/filtersSlice';
-import {heroCreated} from '../heroesList/heroesSlice';
+
+import {useCreateHeroMutation} from '../api/apiSlice';
 import store from '../../store';
 
 const HeroesAddForm = () => {
   const [form, setForm] = useState({name: '', description: '', element: ''});
-  const dispatch = useDispatch();
-  const {request} = useHttp();
+
   const filters = selectAll(store.getState());
   const {filtersLoadingStatus} = useSelector(state => state.filters);
+
+  const [createHero] = useCreateHeroMutation();
 
   const onInputChange = e => {
     const {name, value} = e.target;
@@ -37,9 +38,7 @@ const HeroesAddForm = () => {
       description: form.description,
       element: form.element,
     };
-    request('http://localhost:3001/heroes', 'POST', JSON.stringify(newHero))
-      .then(() => dispatch(heroCreated(newHero)))
-      .catch(err => console.error(err));
+    createHero(newHero).unwrap();
     setForm({name: '', description: '', element: ''});
   };
 
